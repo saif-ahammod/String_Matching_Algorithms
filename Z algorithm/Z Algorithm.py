@@ -31,6 +31,7 @@ def calculateZ(input):
                 z[k] = right - left
                 right = right - 1
     return z
+
 def findMatchPattern(text,pattern):
     concatedText =  pattern+ "$" +text
     index = []
@@ -43,10 +44,13 @@ def findMatchPattern(text,pattern):
     return index
 
 def main():
-    text = input("Please input a text")
-    pattern = input("Please input a pattern")
+    text = input("Please input the text:  ")
+    pattern = input("Please input the pattern:  ")
     matchIndex = findMatchPattern(text,pattern)
-    print(f"Pattern match found at index {matchIndex}")
+    if matchIndex != -1:
+        print(f"The pattern {pattern} is found at index: {matchIndex}")
+    else:
+        print(f"The pattern {pattern} is not found")
 
 if __name__ == "__main__":
     main()
