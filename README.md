@@ -1,4 +1,5 @@
 # Some String Matching Algorithms
+## Native algorithm
 ## Z algorithm
 <p align="Justify">
   The Z algorithm is a linear time string matching algorithm. It is used to find all occurrences of a pattern in a string. The algorithm works by creating an array, called the Z array, which stores the length of the longest prefix of the string
