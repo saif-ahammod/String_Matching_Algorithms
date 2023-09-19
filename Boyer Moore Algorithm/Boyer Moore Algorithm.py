@@ -117,13 +117,13 @@ def BoyerMoore(text, pattern):
     k = n-1
     while k < m:
         i = n-1
-        h = k
-        while i >= 0 & bool(pattern[i] == text[i]):
+        h = k-1
+        while (i >= 0 and bool(pattern[i] == text[h])):
             i = i-1
             h = h-1
 
         if i < 0:
-            print(f"Index of Pattern: {pattern} matched with text at {k-n-1}")
+            print(f"Index of Pattern: {pattern} matched with text at {k-n}")
             if n > 1 & lprime[1] > 0:
                 k = k + n - lprime[1]
             else:
@@ -138,7 +138,7 @@ def main():
     #Input Text
     text = "aabaabaaaaaaaabaaaaaaabaa"
     #Input Pattern
-    pattern = "aabaa"
+    pattern = "aaaa"
     #Search the pattern if it exist in text
     BoyerMoore(text, pattern)
 
